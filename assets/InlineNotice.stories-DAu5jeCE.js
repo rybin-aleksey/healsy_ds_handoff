@@ -1,0 +1,7 @@
+import{j as o}from"./jsx-runtime-Cf8x2fCZ.js";import{I as l}from"./index-B09blztd.js";import{i as p}from"./Icon-CKpBa_z7.js";import{M as d,f as u}from"./Matrix-Dda3lrhE.js";import"./index-yBjzXJbu.js";import"./index--qcDGAq6.js";const j={title:"Обратная связь/Inline Notice",component:l,tags:["autodocs"],parameters:{...u("2016:1554","Короткая подсказка в рамке. Ширина — FILL."),width:354},args:{text:"Обсудите результаты с врачом",icon:"alert-circle",showIcon:!0},argTypes:{icon:{control:"select",options:p}}},e={},r={name:"Все варианты",parameters:{width:null},render:()=>o.jsx(d,{cellWidth:354,cols:["showIcon=true","showIcon=false"],render:m=>o.jsx(l,{text:"Обсудите результаты с врачом",showIcon:m===0})})};var t,s,a;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:"{}",...(a=(s=e.parameters)==null?void 0:s.docs)==null?void 0:a.source}}};var c,n,i;r.parameters={...r.parameters,docs:{...(c=r.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  name: 'Все варианты',
+  parameters: {
+    width: null
+  },
+  render: () => <Matrix cellWidth={354} cols={['showIcon=true', 'showIcon=false']} render={c => <InlineNotice text="Обсудите результаты с врачом" showIcon={c === 0} />} />
+}`,...(i=(n=r.parameters)==null?void 0:n.docs)==null?void 0:i.source}}};const N=["Playground","AllVariants"];export{r as AllVariants,e as Playground,N as __namedExportsOrder,j as default};
