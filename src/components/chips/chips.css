@@ -1,0 +1,27 @@
+/* ===== biomarkerState (1108:5478). Badge backgrounds are primitives: no semantic status bg tokens ===== */
+.hs-bstate {
+  display: inline-flex; align-items: center; gap: 4px; height: 24px; padding: 2px 12px;
+  border-radius: 8px; white-space: nowrap; flex-shrink: 0;
+}
+.hs-bstate--arrow { padding-left: 8px; }
+.hs-bstate--Low, .hs-bstate--High { background: var(--error-50); color: var(--typography-danger); }
+.hs-bstate--Lower, .hs-bstate--Upper { background: var(--warning-50); color: var(--typography-warning); }
+.hs-bstate--Normal { background: var(--success-50); color: var(--typography-success); }
+.hs-bstate--Medium { background: var(--brand-50); color: var(--brand-700); }
+.hs-bstate__arrow { color: var(--warning-500); }
+.hs-bstate--Lower .hs-bstate__arrow { transform: rotate(180deg); }
+
+/* ===== Chip (1813:1483) ===== */
+.hs-chip {
+  display: inline-flex; align-items: center; gap: var(--spacing-2); height: 32px; padding: 5px var(--spacing-4);
+  border: 0; border-radius: var(--radius-6); background: transparent; white-space: nowrap; flex-shrink: 0;
+  color: var(--typography-secondary); box-shadow: inset 0 0 0 1px var(--border-default); cursor: pointer;
+}
+.hs-chip--S { padding-top: 6px; padding-bottom: 6px; }
+.hs-chip--selected { background: var(--bg-baseGray); box-shadow: none; }
+.hs-chip--Tag { background: var(--bg-baseGray); box-shadow: none; color: var(--typography-primary); cursor: default; }
+.hs-chip--Date {
+  height: 38px; gap: var(--spacing-1); padding: var(--spacing-2) var(--spacing-3); border-radius: var(--radius-2);
+  background: var(--bg-baseGray); box-shadow: none;
+}
+.hs-chip__dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }

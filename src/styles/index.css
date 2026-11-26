@@ -1,0 +1,16 @@
+@import './tokens.css';
+@import './typography.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  color: var(--typography-primary);
+  background: var(--bg-mainWhite);
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font: inherit; color: inherit; }
+
+/* Off-DS values copied 1:1 from Figma are marked in component CSS with "off-DS". */

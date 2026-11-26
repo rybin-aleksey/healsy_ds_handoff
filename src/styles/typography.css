@@ -1,0 +1,21 @@
+/* Text Styles from Figma (17). Class name = style name: heading/H1 -> .ts-heading-H1 */
+.ts-heading-H1 { font-family: var(--font-family-headings); font-weight: var(--font-weight-medium); font-size: var(--font-size-2xl); line-height: var(--font-line-height-2xl); letter-spacing: 0; }
+.ts-heading-H2 { font-family: var(--font-family-headings); font-weight: var(--font-weight-medium); font-size: var(--font-size-xl); line-height: var(--font-line-height-xl); letter-spacing: var(--font-letter-spacing-xs); }
+.ts-heading-H3 { font-family: var(--font-family-headings); font-weight: var(--font-weight-medium); font-size: var(--font-size-md); line-height: var(--font-line-height-md); letter-spacing: 0; }
+.ts-heading-H3-compact { font-family: var(--font-family-headings); font-weight: var(--font-weight-medium); font-size: var(--font-size-md); line-height: var(--font-line-height-xs); letter-spacing: 0; }
+.ts-heading-H4 { font-family: var(--font-family-headings); font-weight: var(--font-weight-medium); font-size: var(--font-size-sm); line-height: var(--font-line-height-sm); letter-spacing: 0; }
+
+.ts-body-L { font-family: var(--font-family-body); font-weight: var(--font-weight-regular); font-size: var(--font-size-md); line-height: var(--font-line-height-xl); }
+.ts-body-L-compact { font-family: var(--font-family-body); font-weight: var(--font-weight-regular); font-size: var(--font-size-md); line-height: var(--font-line-height-md); }
+.ts-body-L-strong { font-family: var(--font-family-body); font-weight: var(--font-weight-medium); font-size: var(--font-size-md); line-height: var(--font-line-height-xl); }
+.ts-body-M { font-family: var(--font-family-body); font-weight: var(--font-weight-regular); font-size: var(--font-size-sm); line-height: var(--font-line-height-sm-2); }
+.ts-body-M-compact { font-family: var(--font-family-body); font-weight: var(--font-weight-regular); font-size: var(--font-size-sm); line-height: var(--font-line-height-sm); }
+.ts-body-M-strong { font-family: var(--font-family-body); font-weight: var(--font-weight-medium); font-size: var(--font-size-sm); line-height: var(--font-line-height-md); }
+.ts-body-S { font-family: var(--font-family-body); font-weight: var(--font-weight-regular); font-size: var(--font-size-xs); line-height: var(--font-line-height-sm); }
+.ts-body-S-strong { font-family: var(--font-family-body); font-weight: var(--font-weight-medium); font-size: var(--font-size-xs); line-height: var(--font-line-height-sm); }
+
+.ts-description-L { font-family: var(--font-family-description); font-weight: var(--font-weight-regular); font-size: var(--font-size-xxs); line-height: var(--font-line-height-2xs); }
+.ts-description-L-strong { font-family: var(--font-family-description); font-weight: var(--font-weight-medium); font-size: var(--font-size-xxs); line-height: var(--font-line-height-2xs); }
+
+.ts-button-L { font-family: var(--font-family-buttons); font-weight: var(--font-weight-regular); font-size: var(--font-size-sm-2); line-height: var(--font-line-height-md); }
+.ts-display-L { font-family: var(--font-family-headings); font-weight: var(--font-weight-light); font-size: var(--font-size-5xl-2); line-height: var(--font-line-height-6xl-2); letter-spacing: 0; }

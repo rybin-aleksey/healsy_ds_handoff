@@ -1,0 +1,100 @@
+/* ===== Button (Figma 987:2870) ===== */
+.hs-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 184px; border: 0; cursor: pointer; white-space: nowrap;
+  padding: 0; background: transparent;
+}
+.hs-button--full { width: 100%; }
+.hs-button--L { height: 56px; border-radius: var(--radius-3); }
+.hs-button--M { height: 40px; border-radius: var(--radius-2); }
+/* Text: Primary L/M and Outline L use button/L; Secondary and Outline M are Regular 16/24 without a style in Figma (off-DS) */
+.hs-button__text { font-family: var(--font-family-buttons); font-weight: var(--font-weight-regular); font-size: var(--font-size-sm-2); line-height: var(--font-line-height-md); }
+.hs-button--Secondary .hs-button__text,
+.hs-button--Outline.hs-button--M .hs-button__text { font-size: var(--font-size-sm); }
+
+.hs-button--Primary { background: var(--button-primaryBg); color: var(--typography-white); }
+.hs-button--Primary:active, .hs-button--Primary.is-active { background: var(--button-primaryBgActive); }
+.hs-button--Secondary { background: var(--button-secondaryBg); color: var(--typography-primary); }
+.hs-button--Secondary:active, .hs-button--Secondary.is-active { background: var(--button-secondaryBgActive); }
+.hs-button--Outline { background: transparent; color: var(--button-outlineText); box-shadow: inset 0 0 0 1px var(--button-outlineBorder); }
+.hs-button--Outline:active, .hs-button--Outline.is-active { color: var(--button-outlineTextActive); box-shadow: inset 0 0 0 1px var(--button-outlineBorderActive); }
+.hs-button:disabled { cursor: default; background: var(--button-disabledBg); color: var(--button-textDisabled); }
+.hs-button--Outline:disabled { background: transparent; box-shadow: inset 0 0 0 1px var(--border-default); }
+
+/* ===== IconButton (1822:2857) ===== */
+.hs-icon-button {
+  display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 40px; height: 40px; padding: var(--spacing-1); border: 0; cursor: pointer;
+  background: var(--bg-baseGray); border-radius: var(--radius-2); color: var(--icons-primaryLineIcon);
+}
+.hs-icon-button:disabled { cursor: default; color: var(--icons-disableLineIcon); }
+
+/* ===== IconButton Dark (1993:1682) ===== */
+.hs-icon-button-dark {
+  display: inline-flex; align-items: center; justify-content: center; border: 0; cursor: pointer;
+  padding: var(--spacing-2); background: var(--button-darkBg); border-radius: var(--radius-100); color: var(--icons-whiteSolidIcon);
+}
+
+/* ===== Shutter Button (1993:1685) ===== */
+.hs-shutter-button {
+  display: inline-flex; align-items: center; justify-content: center; border: 0; cursor: pointer;
+  padding: var(--spacing-4); background: var(--button-secondaryBg); border-radius: var(--radius-100); color: var(--icons-primaryLineIcon);
+}
+
+/* ===== IconButton Light (1999:1524) ===== */
+.hs-icon-button-light {
+  display: inline-flex; align-items: center; justify-content: center; border: 0; cursor: pointer;
+  padding: var(--spacing-1-5); background: var(--bg-mainWhite); border-radius: var(--radius-100); color: var(--icons-primaryLineIcon);
+}
+
+/* ===== Toolbar Action (1999:1527) ===== */
+.hs-toolbar-action {
+  display: inline-flex; flex-direction: column; align-items: center; gap: var(--spacing-1);
+  padding: var(--spacing-1) 0 var(--spacing-05); border: 0; background: transparent; cursor: pointer;
+  color: var(--icons-primaryLineIcon);
+}
+.hs-toolbar-action--fill { flex: 1 1 0; }
+.hs-toolbar-action__label { color: var(--typography-primary); text-align: center; }
+
+/* ===== FAB (1816:1456) ===== */
+.hs-fab {
+  display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px;
+  border: 0; cursor: pointer; background: var(--button-primaryBg); border-radius: var(--radius-100); color: var(--typography-white);
+}
+/* motion: plus → cross with a slight spring overshoot; press squish */
+.hs-fab { transition: transform 120ms ease-out; -webkit-tap-highlight-color: transparent; }
+.hs-fab:active { transform: scale(0.92); }
+.hs-fab__icon { transition: transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+.hs-fab--Open .hs-fab__icon { transform: rotate(45deg); }
+.hs-fab:focus-visible { outline: 2px solid var(--border-active); outline-offset: 3px; }
+
+/* ===== FAB Menu Item (1816:1447) ===== */
+.hs-fab-menu-item {
+  display: inline-flex; align-items: center; gap: var(--spacing-2); border: 0; cursor: pointer;
+  padding: var(--spacing-4) var(--spacing-6); background: var(--button-primaryBg); border-radius: var(--radius-3);
+  color: var(--typography-white);
+}
+.hs-fab-menu { display: inline-flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-1); pointer-events: none; }
+.hs-fab-menu--open { pointer-events: auto; }
+
+/* closed / closing: items sink back under the FAB, top item first, fast ease-in */
+.hs-fab-menu__item {
+  opacity: 0; transform: translateY(16px) scale(0.85); transform-origin: bottom right;
+  transition: opacity 120ms ease-in, transform 150ms ease-in;
+  transition-delay: calc(var(--i) * 30ms);
+}
+/* opening: nearest to the FAB first, 50 ms stagger, spring overshoot */
+.hs-fab-menu--open .hs-fab-menu__item {
+  opacity: 1; transform: none;
+  transition: opacity 180ms ease-out, transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: calc(var(--rev) * 50ms);
+}
+
+/* FAB group: menu above the button, gap 8, right-aligned */
+.hs-fab-group { display: inline-flex; flex-direction: column; align-items: flex-end; gap: var(--spacing-2); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hs-fab, .hs-fab__icon, .hs-fab-menu__item, .hs-fab-menu--open .hs-fab-menu__item { transition-duration: 1ms; transition-delay: 0ms; }
+  .hs-fab-menu__item { transform: none; }
+  .hs-fab-menu--open .hs-fab-menu__item, .hs-fab-menu__item { transition-property: opacity; transition-duration: 150ms; }
+}

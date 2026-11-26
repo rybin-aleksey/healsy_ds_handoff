@@ -1,0 +1,48 @@
+/* ===== Navbar (763:2321). Background #ffffff and title color #141414 are raw values in Figma (off-DS) ===== */
+.hs-navbar {
+  display: flex; align-items: center; width: 100%; padding: 60px var(--spacing-6) var(--spacing-2);
+  background: #ffffff; border-radius: 0 0 16px 16px;
+}
+.hs-navbar__row { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; height: 40px; }
+.hs-navbar__side { position: relative; z-index: 1; display: flex; align-items: center; flex: 1 1 0; color: var(--icons-primaryLineIcon); }
+.hs-navbar__side--right { justify-content: flex-end; gap: 28px; }
+.hs-navbar__btn { display: inline-flex; border: 0; padding: 0; background: transparent; cursor: pointer; color: inherit; }
+.hs-navbar__title { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #141414; text-align: center; pointer-events: none; }
+
+/* ===== Tabbar / Item (1985:1595) ===== */
+.hs-tab-item {
+  flex: 1 1 0; display: flex; flex-direction: column; align-items: center; gap: var(--spacing-05);
+  padding: var(--spacing-1) 0 var(--spacing-05); border: 0; background: transparent; cursor: pointer;
+  color: var(--icons-secondaryLineIcon);
+}
+.hs-tab-item__label { color: var(--typography-secondary); }
+.hs-tab-item--Active { color: var(--icons-primaryLineIcon); }
+.hs-tab-item--Active .hs-tab-item__label { color: var(--typography-primary); }
+
+/* ===== App Footer (Tabbar) (754:2016). Top border color icons/grey is from an external library (off-DS) ===== */
+.hs-tabbar {
+  display: flex; width: 100%; padding: var(--spacing-2) var(--spacing-4) var(--spacing-9);
+  background: var(--bg-mainWhite); border-top: 1px solid #e9edf4;
+}
+
+/* ===== settingsItem (772:2495). All values raw in Figma (off-DS); equivalents noted ===== */
+.hs-settings-item {
+  display: flex; align-items: center; gap: 4px; width: 100%; padding: 16px 20px;
+  background: #f2f3f3; /* = neutral/50 */ border-radius: 12px; border: 0; text-align: left; cursor: pointer;
+}
+.hs-settings-item__text { flex: 1 1 auto; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.hs-settings-item__title { color: var(--neutral-900); } /* Medium 16/20 = heading/H4 */
+.hs-settings-item__subtitle { color: var(--neutral-500); } /* Regular 16/20 = body/M-compact */
+.hs-settings-item__chevron { color: var(--neutral-900); }
+
+/* ===== List Link (1834:1475) ===== */
+.hs-list-link {
+  display: flex; align-items: center; gap: var(--spacing-2); width: 100%; border: 0; text-align: left; cursor: pointer;
+  background: var(--bg-mainWhite); border-radius: var(--radius-3); box-shadow: inset 0 0 0 1px var(--border-default);
+  color: var(--icons-primaryLineIcon);
+}
+.hs-list-link--L { min-height: 80px; padding: 15px var(--spacing-6); } /* 15 has no spacing token */
+.hs-list-link--M { min-height: 60px; padding: var(--spacing-5) var(--spacing-6); }
+.hs-list-link__text { flex: 1 1 auto; display: flex; flex-direction: column; gap: var(--spacing-1); min-width: 0; }
+.hs-list-link__title { color: var(--typography-primary); }
+.hs-list-link__subtitle { color: var(--typography-secondary); }
